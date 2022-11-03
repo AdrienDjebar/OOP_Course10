@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +9,11 @@ namespace OOP_Course10
     class threadSync_Semaphore
     {
         //Semaphore
-
-        static Semaphore _semaphoreEvent = new Semaphore(initialCount:2, maximumCount:3); //The initialCount is the number of threads that can access the semaphore at the same time at the beginning
-                                                                                          //The maximumCount is the number of threads that can access the semaphore at the same time
-                                                                                          //With the parameter (1,1) it behaves exactly as the mutex. We initialize all the threads and then write sequencially
-                                                                                          //With the parameter (2,2) now we initialize all the threads BUT we write with two threads at THE SAME TIME
+        //We use Semaphore in the case where we have to give multiple threads access to a resource at the same time (execute the same function for exemple)
+        static Semaphore _semaphoreEvent = new Semaphore(initialCount: 2, maximumCount: 3); //The initialCount is the number of threads that can access the semaphore at the same time at the beginning
+                                                                                            //The maximumCount is the number of threads that can access the semaphore at the same time
+                                                                                            //With the parameter (1,1) it behaves exactly as the mutex. We initialize all the threads and then write sequencially
+                                                                                            //With the parameter (2,2) now we initialize all the threads BUT we write with two threads at THE SAME TIME
         static void Main(string[] args)
         {
             //Create 5 Threads --- All Threads want to File Operation
@@ -38,4 +38,3 @@ namespace OOP_Course10
         }
     }
 }
-*/

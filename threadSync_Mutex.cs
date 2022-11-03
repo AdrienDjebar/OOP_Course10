@@ -9,6 +9,7 @@ namespace OOP_Course10
     class threadSync_Mutex
     {
         //Mutex
+        //We use the Mutex where we only have to give permission to a single thread (unlike the Semaphore where we can give permission to multiple threads)
         static Mutex _mutexEvent = new Mutex(); //The initial condition is not set because it will automatically set it to true when the first thread start
         static void Main(string[] args)
         {
